@@ -2,11 +2,13 @@ import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import Link from "next/link";
 
+import styles from "../styles/Home.module.css";
+
 export default function Home() {
   return (
-    <>
-      <h1>Home Component</h1>
-      <p>
+    <div>
+      <h1 className={styles.title}>Home Page</h1>
+      <p className={styles.text}>
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
@@ -15,7 +17,7 @@ export default function Home() {
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt
         mollit anim id est laborum."
       </p>
-      <p>
+      <p className={styles.text}>
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
@@ -25,8 +27,8 @@ export default function Home() {
         mollit anim id est laborum."
       </p>
       <Link href="/ninjas">
-        <a>See Ninja Listing</a>
+        <a className={styles.btn}>See Ninja Listing</a>
       </Link>
-    </>
+    </div>
   );
 }
